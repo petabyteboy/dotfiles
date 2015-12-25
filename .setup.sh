@@ -1,7 +1,7 @@
 #!/bin/bash
 #this works for arch and parabola
 #this also installs the "aur" script to install aur packages with little overhead
-sudo pacman -S imagemagick i3lock
+sudo pacman -S imagemagick i3lock rofi
 sudo mv .aur.sh /usr/bin/aur
 sudo chown root:root /usr/bin/aur
 sudo chmod 755 /usr/bin/aur
