@@ -1,6 +1,7 @@
 # Shadow
 shadow = true;
 no-dnd-shadow = true;
+no-dock-shadow = true;
 clear-shadow = true;
 shadow-radius = 10;
 shadow-offset-x = -10;
@@ -15,6 +16,10 @@ fading = true;
 fade-in-step = 0.03;
 fade-out-step = 0.03;
 
+# Blur
+blur-background = true;
+blur-kern = "7x7box";
+
 # Other
 backend = "glx"
 mark-wmwin-focused = true;
@@ -22,11 +27,5 @@ mark-ovredir-focused = true;
 detect-client-opacity = true;
 detect-transient = true;
 detect-client-leader = true;
-invert-color-include = [ ];
-# resize-damage = 1;
 
-wintypes:
-{
-  tooltip = { fade = true; fade-in-step = 0.01; shadow = false; opacity = 0.75; focus = true; };
-};
-
+blur-background-exclude = [ "window_type = 'dock'", "window_type = 'tooltip'" ]

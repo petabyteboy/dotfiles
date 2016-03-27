@@ -156,7 +156,7 @@ bar {
         tray_output primary
         i3bar_command i3bar -t
 	colors {
-		background #00000090
+		background #00000000
 		focused_workspace #00000000 #ffffff40 #555555
 		inactive_workspace #00000000 #00000070 #eeeeee
 	}
@@ -167,3 +167,6 @@ for_window [class="^.*"] border pixel 0
 gaps inner 13
 
 bindsym $mod+z exec "~/.lock.sh"
+
+exec 'gnome-keyring-daemon'
+exec 'fish -c "set -Ux SSH_AUTH_SOCK /run/user/1000/keyring/ssh"'
