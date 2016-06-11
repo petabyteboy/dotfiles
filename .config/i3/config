@@ -40,7 +40,7 @@ bindsym $mod+a exec ~/.rofi.sh
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
-# bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+#bindsym $mod+a exec dwm
 
 # change focus
 bindsym $mod+n focus left
@@ -154,17 +154,17 @@ bindsym $mod+c mode "resize"
 bar {
         status_command i3status
         tray_output primary
-        i3bar_command i3bar -t
-	colors {
-		background #00000000
-		focused_workspace #00000000 #ffffff40 #555555
-		inactive_workspace #00000000 #00000070 #eeeeee
-	}
+        i3bar_command i3bar
+#	colors {
+#		background #00000000
+#		focused_workspace #00000000 #ffffff40 #555555
+#		inactive_workspace #00000000 #00000070 #eeeeee
+#	}
 }
 
 #theme config
 for_window [class="^.*"] border pixel 0
-gaps inner 13
+#gaps inner 13
 
 bindsym $mod+z exec "~/.lock.sh"
 

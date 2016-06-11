@@ -1,8 +1,7 @@
-set EDITOR vim
-export EDITOR
+set -x EDITOR vim
 
 function agent
-	ssh-add -l; or ssh-add
+	ssh-add -l > /dev/null; or ssh-add
 end
 
 function mosh
@@ -11,12 +10,16 @@ function mosh
 end
 
 function mosch
-	mosh --ssh 'ssh -p 62954' $argv
+	mosh --ssh="ssh -p 62954" $argv
 end
 
 function ssh
 	agent
 	/usr/bin/ssh $argv
+end
+
+function ssch
+	ssh -p 62954 $argv
 end
 
 # start X at login

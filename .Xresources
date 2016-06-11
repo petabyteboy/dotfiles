@@ -1,14 +1,16 @@
 !color
 URxvt.depth: 32
-URxvt.background: [70]#000
-URxvt*foreground: white
-URxvt*background: black
-URxvt*scrollColor: [30]#000
+URxvt.foreground: white
+URxvt.background: black
+URxvt.scrollColor: #444
+
+URxvt.transparent: true
+URxvt.shading: 50
 
 !URxvt*fading:  30
 !URxvt*termName:  screen-256color
 URxvt.scrollstyle: plain
-URxvt.font: xft:DejaVu Sans Mono:size=10
+URxvt.font: xft:Monospace:pixelsize=13
 
 !make links clickable
 URxvt.perl-ext-common: default,matcher
